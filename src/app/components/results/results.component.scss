@@ -1,0 +1,20 @@
+:host {
+    .results {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 32px;
+        @media screen and (max-width: 1200px) {
+            grid-template-columns: repeat(2, 1fr);
+        }
+        @media screen and (max-width: 768px) {
+            grid-template-columns: repeat(1, 1fr);
+        }
+    }
+}
+
+// <576px
+// Small	sm	≥576px
+// Medium	md	≥768px
+// Large	lg	≥992px
+// Extra large	xl	≥1200px
+// Extra extra large	xxl	≥1400px

@@ -1,0 +1,4 @@
+<h2 *ngIf="loginItems.length > 0">List of users</h2>
+<div class="results">
+    <app-results-item *ngFor="let item of loginItems" [item]="item"></app-results-item>
+</div>
