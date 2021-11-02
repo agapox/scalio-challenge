@@ -1,8 +1,9 @@
 <form [formGroup]="loginForm">
-    <input
-      type="text"
-      formControlName="login"
-    >
+  <input
+    type="text"
+    formControlName="login"
+    placeholder="Search github user"
+  >
 
     <button (click)="onSubmit()">Search</button>
 </form>

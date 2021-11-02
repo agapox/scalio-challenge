@@ -16,10 +16,9 @@
             Next
         </button>
     </div>
-    <div>
+    <div class="page-info">
         Page {{ currentPage }} of {{ pages }} | Results {{ totalCount }}
     </div>
 </ng-container>
-<div class="warning" *ngIf="failedRequest.failed">
-    <p>{{ failedRequest.message }}</p>
-</div>
+
+<app-alert *ngIf="failedRequest.failed" [message]="failedRequest.message" [type]="failedRequest.counter > 3 ? 'danger' : 'warning'"></app-alert>

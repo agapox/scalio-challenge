@@ -1,8 +1,5 @@
 <div id="main-container">
-  <h1>main-container</h1>
-  <div id="container-wrappper">
-    <h2>container-wrappper</h2>
-    <app-search (textSeachedEv)="getTextSearch($event)"></app-search>
-    <app-results [text]="text"></app-results>
-  </div>
+  <h3>Here you can search for a github user.</h3>
+  <app-search (textSeachedEv)="getTextSearch($event)"></app-search>
+  <app-results [text]="text"></app-results>
 </div>

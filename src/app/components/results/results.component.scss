@@ -11,20 +11,24 @@
         }
     }
     .pagination {
+        margin-top: 2rem;
         max-width: 100%;
         display: flex;
+        justify-content: center;
+        gap: 40px;
         &__number {
             margin: 0 4px;
             width: 70px;
         }
     }
-    .warning {
-        background-color: #f7bfbf;
-        color: #6b0606;
-        border: 2px solid #6b0606;
-        border-radius: 8px;
-        max-width: 70%;
-        margin: auto;
-        padding: 1rem;
+
+    .page-info {
+        display: flex;
+        justify-content: center;
+        margin-top: 1rem;
+    }
+
+    app-alert {
+        margin-top: 2rem;
     }
 }
