@@ -29,11 +29,11 @@ export class LoginService {
     return this.httpClient.get<LoginHttpResInterface>(`${this.APIURL}${login}&per_page=9&page=${page}`)
       .pipe(
         retry(3), // retry a failed request up to 3 times
-        catchError(this.handleError) // then handle the error
+        catchError((err) => this.handleError(err)) // then handle the error
       );
   }
 
-  private handleError(error: HttpErrorResponse) {
+  handleError(error: HttpErrorResponse) {
     console.log(error)
     if (error.error instanceof ErrorEvent) {
       console.error('An error occurred:', error.status);

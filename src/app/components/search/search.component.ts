@@ -8,8 +8,6 @@ import { LoginService } from 'src/app/services/login.service';
   styleUrls: ['./search.component.scss']
 })
 export class SearchComponent implements OnInit {
-
-  @Output() textSeachedEv: EventEmitter<string> = new EventEmitter<string>();
   
   loginForm = new FormGroup({
     login: new FormControl('')

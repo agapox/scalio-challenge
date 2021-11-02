@@ -8,17 +8,10 @@ import { Component, OnInit } from '@angular/core';
 export class AppComponent implements OnInit {
   title = 'scalio-challenge';
 
-  text: string = '';
-
   constructor() { }
 
   ngOnInit() {
 
-  }
-
-  getTextSearch(text: string) {
-    console.log(text)
-    this.text = text
   }
   
 }
