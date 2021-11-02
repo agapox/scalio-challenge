@@ -2,7 +2,7 @@
   <h1>main-container</h1>
   <div id="container-wrappper">
     <h2>container-wrappper</h2>
-    <app-search></app-search>
-    <app-results></app-results>
+    <app-search (textSeachedEv)="getTextSearch($event)"></app-search>
+    <app-results [text]="text"></app-results>
   </div>
 </div>

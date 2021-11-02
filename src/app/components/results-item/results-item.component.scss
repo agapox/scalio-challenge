@@ -8,19 +8,33 @@
         display: grid;
         grid-template-columns: 130px 1fr;
         gap: 16px;
-        padding: 16px;;
-        background-color: #3e38c0;
-        color: #ffffff;
-        @include shadow-mix(40px, -6px, .25);
+        padding: 16px;
+        background-color: #d8d8e6;
+        border: 2px solid;
+        border-color: transparent;
+        @include shadow-mix(16px, -6px, .25);
+        transition: box-shadow .227s ease-in-out, border-color .227s ease-in-out;
+
+        &:hover {
+            @include shadow-mix(26px, -6px, .25);
+            border-color: #b9b9e4;
+
+            .user {
+                &__github {
+                    background-color: #e4ebd3;
+                }
+            }
+        }
         &__img {
             max-width: 130px;
             width: 100%;
             border-radius: 400px;
-            border: 3px solid #1b1674;
+            border: 1px solid #1b1674;
             @include shadow-mix(15px, -8px, .7);
         }
         &__name {
             margin-bottom: 4px;
+            transition: color .227s ease-in-out;
         }
         &__type {
             margin-top: 4px;
@@ -31,13 +45,13 @@
 
         &__github {
             border-radius: 100px;
-            background-color: #ffffff;
+            background-color: #adabee;
             width: 45px;
             height: 45px;
             display: flex;
             justify-content: center;
             align-items: center;
-            border: 2px solid #1b1674;
+            transition: background-color .227s ease-in-out;
 
             img {
                 width: 35px;
@@ -45,10 +59,6 @@
                 
             }
 
-        }
-
-        h1, h2, h3, h4, h5, h6 {
-            color: #ffffff;
         }
     }
 }

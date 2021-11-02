@@ -6,10 +6,19 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./app.component.scss']
 })
 export class AppComponent implements OnInit {
-  title = 'scalio-challenge';  
+  title = 'scalio-challenge';
+
+  text: string = '';
 
   constructor() { }
 
-  ngOnInit() {}
+  ngOnInit() {
+
+  }
+
+  getTextSearch(text: string) {
+    console.log(text)
+    this.text = text
+  }
   
 }

@@ -1,6 +1,6 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, EventEmitter, OnInit, Output } from '@angular/core';
 import { FormControl, FormGroup } from '@angular/forms';
-import { LoginService } from '../../services/login.service';
+import { LoginService } from 'src/app/services/login.service';
 
 @Component({
   selector: 'app-search',
@@ -9,21 +9,22 @@ import { LoginService } from '../../services/login.service';
 })
 export class SearchComponent implements OnInit {
 
+  @Output() textSeachedEv: EventEmitter<string> = new EventEmitter<string>();
+  
+  loginForm = new FormGroup({
+    login: new FormControl('')
+  })
+
   constructor(
-    private loginServices: LoginService
+    private loginService: LoginService
   ) { }
 
   ngOnInit(): void {
   }
 
-  loginForm = new FormGroup({
-    login: new FormControl('')
-  })
   
   onSubmit() {
-    this.loginServices.getLogin(this.loginForm.value.login).subscribe((data) => {
-      console.log(data)
-    })
+    this.loginService.setSearchedText(this.loginForm.value.login)
   }
 
 }

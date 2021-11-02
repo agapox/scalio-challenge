@@ -10,6 +10,7 @@ fdescribe('LoginService', () => {
   let service: LoginService;
   let httpMock: HttpTestingController;
   let injector: TestBed;
+  const textOnInputMock = 'agapox';
 
   beforeEach(() => {
     TestBed.configureTestingModule({
@@ -27,7 +28,6 @@ fdescribe('LoginService', () => {
   });
 
   it('should get list of users', () => {
-    const textOnInputMock = 'agapox';
     expect(service).toBeTruthy();
     service.getLogin(textOnInputMock).subscribe((data: any) => {
       expect(data).toBeTruthy();
@@ -49,7 +49,8 @@ fdescribe('LoginService', () => {
   })
 
 
-  it('should console error if failed', () => {
+  it('should console error if getLogin failed', () => {
+    
     
   });
 
